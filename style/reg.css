@@ -1,0 +1,109 @@
+*{
+    font-family: 'Almarai', sans-serif;    
+    color: #222 ;
+    direction: rtl;
+}
+
+
+body
+{
+    margin: 0px; 
+    padding:0px;
+    background-image: url('../img/regBackGround2.jpg');
+    background-size: 1500px;
+   
+    color: #222 
+}
+
+#contaner{
+
+    
+}
+
+form{
+    margin:8% auto;
+    background-color: #E8EAE9;
+    width: 30%;
+    padding: 30px;
+    border: 1px solid #FEFEFE;
+    border-radius: 8px;
+
+    box-shadow: 0px 4px 20px grey;
+
+}
+form>legend{
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+form input ,button,select{
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    height: 7%;
+    border: 1px solid #FEFEFE;
+    border-radius: 6px;
+    padding: 5px;
+    font-size: 16px;
+
+}
+
+form >div>label{
+    font-size: 18px;
+
+}
+
+form>div{
+    display:block;
+    padding-left: 10%;
+}
+
+form>div>input{
+    display: inline-block;
+}
+
+form>div>input{
+    width: 10%;
+    height: 10px;
+    padding: 10px;
+}
+
+form>label{
+    padding-left: 10%;
+    font-size: 20px;
+}
+
+form>div>label{
+    font-size: 18px;
+}
+
+form>button:hover{
+    background-color: #01D28E;
+    cursor:pointer
+}
+
+form>input:focus,form>select:focus {
+    border-bottom:2px solid #01D28E;
+    outline: none;
+
+    transition: border-bottom 0.5s;
+    
+}
+
+/* form>div>div{
+    display:inline-block;
+    width: 20px;
+    padding-bottom: 20px;
+    background-color: brown;
+}
+form>div>div>input,form>div>div>label{
+    display:inline-block;
+    width: 20px;
+    padding-bottom: 20px;
+    background-color: brown;
+} */
+
+.but-sub{
+    font-size: 24px;
+}

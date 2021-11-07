@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style/reg.css">
+</head>
+
+<body>
+    <section id='contaner'>
+        <form action="http://127.0.0.1:5500/index.html" method="POST">
+            <legend>Login</legend>
+            <select id='list' required>
+                <option value='select'>select</option>
+                <option value="teacher">teacher</option>
+                <option value="student">student</option>
+            </select>
+            <input type="text" id="name" placeholder="name" required>
+            <!-- <input type="email" id="email" placeholder="email" required> -->
+            <input type="password" id="pswd" placeholder="password" required>
+            <!-- <input type="text" id="spc" placeholder="specialization" required> -->
+            <!-- <input type="text" placeholder="mobile" id="mob" required> -->
+            <!-- <label>Gender</label>
+            <div>
+                <label>Male</label>
+                <input type="radio" name='gender' value="Male">
+                <label>Female</label>
+                <input type="radio" name='gender' value="Female">
+            </div> -->
+            <!-- <button type="button" onclick="Save()">submit</button> -->
+            <button type="button" onclick="Show()">show</button>
+            <div id="data"></div>
+        </form>
+    </section>
+    <script src="js/jquery-3.1.1.js"></script>
+
+    <script src='js/login.js'>
+    </script>
+</body>
+
+</html>

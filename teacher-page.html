@@ -1,0 +1,151 @@
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="style/student.css">
+</head>
+
+<body onload="Show()">
+
+    <section class="nav">
+        <p>اشرح</p>
+        <lu class="font-aw-log">
+            <a class="logo" href="http://">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="http://">
+                <i class="far fa-envelope"></i>
+            </a>
+
+            <a href="http://">
+                <i class="far fa-bell"></i>
+            </a>
+
+            <a href="http://">
+                <i class="fas fa-search"></i>
+            </a>
+            <button id="logout" onclick="ClearCoockie()" style="display: none;">Logout</button>
+
+
+        </lu>
+    </section>
+
+    <section class="body">
+
+        <article>
+            <h4>ابدأ بكتابة طلب الشرح</h4>
+            <p>
+                من خلال اشرح تستطيع كتابة طلب لشرح ما تريد، أدخل تفاصيل الشرح والميزانية المتوقعة،
+                ليتم مراجعة طلبك ونشره مجاناً على اشرح.
+                بعد ذلك، سيتقدّم أفضل المعلمين المسجلين
+                بعروض مختلفة لتختار
+                العرض المناسب لك.
+            </p>
+
+
+            <h4>اشرح يحفظ لك حقوقك</h4>
+            <p>
+                عندما تتعامل مع أحد المعلمين من خلال موقع اشرح يبقى الموقع وسيطا بينك وبين المعلم وفقط عندما ينتهي الشرح
+                كاملاً يتم تحويل المبلغ لحساب الملعم الذي قام بالشرح لك .
+            </p>
+        </article>
+        <article id="po">
+            <section class="writePost">
+
+            </section>
+            <div class="card text-center post">
+                <div class="card-header">
+                    اخر الطلبات
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">مطلوب معلم جغرفيا ثانوي</h5>
+                    <p class="card-text" id='postDiv'>مطلوب معلم جغرفيا لشرح درس خاس في منهج ثالثة ثانوي</p>
+                    <a href="#" class="btn btn-primary">تصفح الطلب</a>
+                </div>
+                <div class="card-footer text-muted">
+                    منذ يومين
+                </div>
+            </div>
+            <div></div>
+
+        </article>
+        <article></article>
+    </section>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/postTecher.js"></script>
+    <script src="js/script-home.js"></script>
+
+    <script>
+        function postFun() {
+            var text = $('#textarea').val()
+            var date = new Date().toLocaleString()
+            var data = {
+                pastText: text,
+                postDate: date
+            }
+
+            $.ajax({
+                url: 'https://fir-ashrah-default-rtdb.firebaseio.com/post.json'
+            })
+
+
+
+        }
+        //  let 
+        //     arr = [],
+        //     cookieVal = document.cookie.split(";"); 
+        //     for(let x in cookieVal){
+        //     arr[cookieVal[x].split("=")[0].trim()] = cookieVal[x].split("=")[1] ;
+        //    var div =  document.createElement('div')
+        //     var div2 =  document.getElementById('postDiv').appendChild(div)
+        //     var text = document.createTextNode(arr[cookieVal[x].split("=")[0].trim()])
+        //     div2.appendChild(text);
+        //    // document.getElementById('postDiv').innerHTML +="<br>"+arr[cookieVal[x].split("=")[0]]
+        //     //document.getElementById('postDiv').cloneNode(true).innerHTML = arr[cookieVal[x].split("=")[0]]
+
+        // } 
+
+
+        // count = arr['count'];
+        // let i = 1 ;
+        // if(count > 1) i = count;
+        // function postFun(){
+        // var textarea = document.getElementById('textarea').value
+        // document.cookie = "post"+i+"="+textarea+";expires=2/2/2021"
+        // i++
+        // document.cookie = "count="+i+";expires=2/2/2021"
+
+        // document.getElementById('textarea').value = " "
+
+
+        // arr[cookieVal[cookieVal.length - 1].split("=")[0].trim()] = cookieVal[cookieVal.length - 1].split("=")[1] ;
+        //      div =  document.createElement('div')
+        //      div2 =  document.getElementById('postDiv').appendChild(div)
+        //      text = document.createTextNode(arr[cookieVal[cookieVal.length - 1].split("=")[0].trim()])
+        //     div2.appendChild(text);
+
+        //   }
+    </script>
+</body>
+
+</html>

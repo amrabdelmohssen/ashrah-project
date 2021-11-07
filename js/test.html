@@ -1,0 +1,30 @@
+<form action="" method="POST">
+    <legend>Registration</legend>
+    <select id='list' required>
+        <option value='select'>select</option>
+        <option value="teacher">teacher</option>
+        <option value="student">student</option>
+    </select>
+    <input type="text" placeholder="name" id="name" required pattern="^[a-zA-Z ]{3,20}"
+        title="Username should only contain letters and at least 3 letters">
+    <input type="email" placeholder="email" id="email" required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+    <input type="password" id="pswd" placeholder="password"  required
+        pattern="^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[a-zA-Z]).{8,}$"
+        title="invalid password , password should contain A-z/a-z/1-9/special characters and at least 8 characters  ">
+    <input id="spc" type="text" placeholder="specialization" required
+        pattern="^[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FFa-zA-Z]+[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FFa-zA-Z-_]*$"
+        title="invalid specialization , you should contain letters only">
+    <!-- <input type="text" placeholder="country" required> -->
+    <input type="text" placeholder="mobile" id="mob" required pattern="^(?:010|011|012)[0-9]{8}" title="invalid mobile">
+    <label style=>Gender</label>
+    <div>
+
+        <label>male</label>
+        <input type="radio" name='gender' value="Male" required>
+        <label>felmale</label>
+        <input type="radio" name='gender' value="Felmale" re>
+    </div>
+
+
+    <button type="submit" onclick="Save()"></button>>submit</button>
+</form>
